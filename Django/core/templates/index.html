@@ -1,31 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Django 1 - Index</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <h1>Index</h1>
+    <center>
+        <h1>Index</h1>
 
-    <h2>{{ curso }}</h2>
+        <img src="{% static 'images/django_logo.jpg' %}"/>
 
-    <p>{{ outro }}</p>
+        <h2>{{ curso }}</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-            </tr>
-        <thead>
-        <tbody>
-        {% for produto in produtos %}
-            <tr>
-                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }} </a></td>
-                <td>{{ produto.preco }} </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <p>{{ outro }}</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+            <thead>
+            <tbody>
+            {% for produto in produtos %}
+                <tr>
+                    <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }} </a></td>
+                    <td>{{ produto.preco }} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <button onclick='teste();'>Clique me</button>
+    </center>
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
