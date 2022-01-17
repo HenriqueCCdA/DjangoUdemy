@@ -6,8 +6,6 @@ from django.template.defaultfilters import slugify
 
 from stdimage.models import StdImageField
 
-from core.views import produto
-
 
 class Base(models.Model):
     criado = models.DateField('Data de Criação', auto_now_add=True)
