@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  database:
+    container_name: fusion
+    image: postgres
+    restart: always
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=university
+      - POSTGRES_USER=geek
+      - POSTGRES_DB=fusion
+    ports:
+      - 5434:5432

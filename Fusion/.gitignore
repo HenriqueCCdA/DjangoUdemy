@@ -1,0 +1,4 @@
+.venv
+.pgdata
+__pycache__
+template
