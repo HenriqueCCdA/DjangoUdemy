@@ -2,3 +2,5 @@
 .pgdata
 __pycache__
 template
+
+htmlcov
