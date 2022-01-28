@@ -6,6 +6,6 @@ services:
     container_name: udemy_django_realtime
     image: redis
     restart: always
-    command: redis-server --requirepass Redis2019!
+    command: redis-server
     ports:
       - 6379:6379

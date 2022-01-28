@@ -131,11 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Especifica do Channels
 ASGI_APPLICATION = 'realtime.routing.application'
 
-CHANNEL_LAYRES = {
+CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
             'hosts': [('127.0.0.1', 6379)]
         },
     },
+
 }
